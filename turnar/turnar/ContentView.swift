@@ -15,8 +15,8 @@ struct ContentView: View {
     var body: some View {
         ZStack{
             VStack{
-            Image("za")
-                .resizable()
+            Image("ne")
+                
         
             VStack (alignment:.leading){
                 Spacer()

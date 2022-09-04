@@ -10,10 +10,57 @@ import SwiftUI
 struct Store: View {
     var body: some View {
         
-        VStack (alignment:.leading){
-                Text("سجل الان")
+    
+        VStack {
+                Text("*store:                                ")
                     .font(.largeTitle)
+                    .fontWeight(.semibold)
+                    .foregroundColor(Color.green)
+                    Divider()
+            NavigationView{
+            ScrollView{
+                
+            
+            HStack{
+                NavigationLink(destination: ja()){
+                Image("ja")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 165, height: 165)
+                }
+                NavigationLink(destination: mo()){
+                Image("mo")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 165, height: 165)
+                }
             }
+            HStack{
+                NavigationLink(destination: ka()){
+                Image("ka")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 165, height: 165)
+                }
+                NavigationLink(destination: ba()){
+                Image("ba")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 165, height: 165)
+                }
+            }
+            HStack{
+                NavigationLink(destination: q()){
+                Image("q")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 165, height: 165)
+                }
+            }
+            }
+            }
+        }
+        
     }
 }
 
