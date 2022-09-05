@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct ja: View {
+    @State var ra = []
+    @State var newItem = ""
     var body: some View {
-        NavigationView{
         VStack{
             HStack{
                 NavigationLink(destination: Store()){
@@ -20,10 +21,11 @@ struct ja: View {
                     .foregroundColor(Color.black)
                 
                 }
+                Spacer()
                 Text("ra3ialm7al")
                     .font(.largeTitle)
                     .foregroundColor(Color.blue)
-            
+            Spacer()
                 
                 NavigationLink(destination: ContentView()){
                 Image(systemName:"person.fill")
@@ -31,20 +33,77 @@ struct ja: View {
                     .scaledToFit()
                     .frame(width: 25, height: 25)
                     .foregroundColor(Color.black)
-                    Spacer()
+                    
                 
                 }
                 
-            }
+            }.padding()
+            Spacer()
+            List{
+                HStack{
+                    Image("DB250")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 100, height: 100)
+                    Text("   80 kd")
+                        .font(.system(size: 20))
+                        
+                    
+                    
+                }
+                HStack{
+                    Image("FD150e")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 100, height: 100)
+                    Text("   250 kd")
+                        .font(.system(size: 20))
+                    
+                }
+                HStack{
+                    Image("pa")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 100, height: 100)
+                    Text("   450 kd")
+                        .font(.system(size: 20))
+                }
+                HStack{
+                    Image("sh")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 100, height: 100)
+                    Text("   70 kd")
+                        .font(.system(size: 20))
+                }
+                HStack{
+                    Image("h")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 100, height: 100)
+                    Text("   20 kd")
+                        .font(.system(size: 20))
+                }
+                HStack{
+                    Image("fa")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 100, height: 100)
+                }
+                HStack{
+                    Text("total:")
+                }
             
-        }.padding()
-        }
-        
-            
-        
-        
+    
     }
+        }
 }
+}
+            
+        
+        
+    
+
 
 struct ja_Previews: PreviewProvider {
     static var previews: some View {

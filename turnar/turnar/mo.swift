@@ -9,7 +9,37 @@ import SwiftUI
 
 struct mo: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            HStack{
+                NavigationLink(destination: Store()){
+                    Image(systemName:"house.fill")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 25, height: 25)
+                        .foregroundColor(Color.black)
+                    
+                }
+                Spacer()
+                Text("Q8_50")
+                    .font(.largeTitle)
+                    .foregroundColor(Color.blue)
+                Spacer()
+                NavigationLink(destination: ContentView()){
+                    Image(systemName:"person.fill")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 25, height: 25)
+                        .foregroundColor(Color.black)
+                }
+            }.padding()
+            Spacer()
+            List{
+                HStack{
+                    Image("")
+                }
+            }
+        }
+    
     }
 }
 
