@@ -119,10 +119,11 @@ struct ka: View {
                         .onTapGesture {
                             let item = (prices[0] * ka[0])
                             let item2 = (prices[1] * ka[1])
-                            let item3 =  (prices[2] * ka[2])
-                            let item4 = (prices[4] * ka[4])
-                            let item5 = (prices[5] * ka[5])
-                            total = item + item2 + item3; +item4 + item5
+                            let item3 = (prices[2] * ka[2])
+                            let item4 = (prices[3] * ka[3])
+                            let item5 = (prices[4] * ka[4])
+                            let item6 = (prices[5] * ka[5])
+                            total = item + item2 + item3 + item4 + item5 + item6
                                 
                         }
                     Text("total price:\(total)")

@@ -120,10 +120,11 @@ struct mo: View {
                        .onTapGesture {
                            let item = (prices[0] * mo[0])
                            let item2 = (prices[1] * mo[1])
-                           let item3 =  (prices[2] * mo[2])
-                           let item4 = (prices[4] * mo[4])
-                           let item5 = (prices[5] * mo[5])
-                           total = item + item2 + item3; +item4 + item5
+                           let item3 = (prices[2] * mo[2])
+                           let item4 = (prices[3] * mo[3])
+                           let item5 = (prices[4] * mo[4])
+                           let item6 = (prices[5] * mo[5])
+                           total = item + item2 + item3 + item4 + item5 + item6
                     
                                
                        }

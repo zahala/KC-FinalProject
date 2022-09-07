@@ -10,7 +10,7 @@ import SwiftUI
 struct ja: View {
     @State var ra = []
     @State var newItem = ""
-    @State var quantity = [0,0,0,0,0,0]
+    @State var ja = [0,0,0,0,0,0]
     @State var prices = [80,250,450,70,20,5]
     @State var total = 0
     var body: some View {
@@ -51,7 +51,7 @@ struct ja: View {
                     Text("   \(prices[0]) kd")
                         .font(.system(size: 20))
                        Spacer()
-                    Stepper("", value: $quantity[0], in: 0...10, step: 1)
+                    Stepper("", value: $ja[0], in: 0...10, step: 1)
                         .labelsHidden()
     
                 }.padding()
@@ -65,7 +65,7 @@ struct ja: View {
                         .font(.system(size: 20))
                     Spacer()
                     
-                 Stepper("", value: $quantity[1], in: 0...10, step: 1)
+                 Stepper("", value: $ja[1], in: 0...10, step: 1)
                      .labelsHidden()
                 }.padding()
                 
@@ -78,7 +78,7 @@ struct ja: View {
                         .font(.system(size: 20))
                     Spacer()
                     
-                    Stepper("", value: $quantity[2], in: 0...10, step: 1)
+                    Stepper("", value: $ja[2], in: 0...10, step: 1)
                      .labelsHidden()
                 }.padding()
                 HStack{
@@ -90,7 +90,7 @@ struct ja: View {
                         .font(.system(size: 20))
                     Spacer()
                     
-                 Stepper("", value: $quantity[3], in: 0...10, step: 1)
+                 Stepper("", value: $ja[3], in: 0...10, step: 1)
                      .labelsHidden()
                 }.padding()
                 HStack{
@@ -102,7 +102,7 @@ struct ja: View {
                         .font(.system(size: 20))
                     Spacer()
                     
-                 Stepper("", value: $quantity[4], in: 0...10, step: 1)
+                 Stepper("", value: $ja[4], in: 0...10, step: 1)
                      .labelsHidden()
                 }.padding()
                 HStack{
@@ -114,7 +114,7 @@ struct ja: View {
                         .font(.system(size: 20))
                     Spacer()
                     
-                 Stepper("", value: $quantity[5], in: 0...10, step: 1)
+                 Stepper("", value: $ja[5], in: 0...10, step: 1)
                      .labelsHidden()
                 }.padding()
                 VStack{
@@ -126,10 +126,11 @@ struct ja: View {
                         .onTapGesture {
                             let item = (prices[0] * ja[0])
                             let item2 = (prices[1] * ja[1])
-                            let item3 =  (prices[2] * ja[2])
-                            let item4 = (prices[4] * ja[4])
-                            let item5 = (prices[5] * ja[5])
-                            total = item + item2 + item3; +item4 + item5
+                            let item3 = (prices[2] * ja[2])
+                            let item4 = (prices[3] * ja[3])
+                            let item5 = (prices[4] * ja[4])
+                            let item6 = (prices[5] * ja[5])
+                            total = item + item2 + item3 + item4 + item5 + item6
                                 
                         }
                     Text("total price:\(total)")

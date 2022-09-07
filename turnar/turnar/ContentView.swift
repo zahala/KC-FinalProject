@@ -18,9 +18,11 @@ struct ContentView: View {
             VStack{
             Image("ne")
                 
+                    
+                
         
             VStack (alignment:.leading){
-                Spacer()
+                
                Text("Name:")
                     .font(.system(size: 30))
                 TextField("name", text: $name)
@@ -41,22 +43,26 @@ struct ContentView: View {
                 TextField("home address", text: $home)
                     .font(.system(size: 20))
                     .background(Color.white)
-               
+                    .padding(.bottom,20)
                     NavigationLink(destination: Store()){
                         
+                        HStack{
+                            Spacer()
                             Text("سجل الان")
+                            
                             .font(.system(size: 30))
                             .padding(9)
                             .background(.green)
                             .cornerRadius(15)
                             .foregroundColor(.white)
-                    
+                            Spacer()
+                        }
                 }
                     
             }
             }.padding()
             
-            }
+        }.navigationBarHidden(true)
         
             
         }

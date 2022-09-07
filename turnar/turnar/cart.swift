@@ -11,7 +11,30 @@ struct cart: View {
     @State var total : Int
     var body: some View {
         VStack{
-            Text("total price:\(total)")
+            HStack{
+                Text("total price:\(total)")
+                    .font(.largeTitle)
+                    .fontWeight(.semibold)
+                    .foregroundColor(Color.green)
+            
+                    
+            }
+            HStack{
+            Image("ke")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 200, height: 250)
+            }
+           
+            HStack{
+                Text("done payment")
+                    .padding(9)
+                    .background(.green)
+                    .cornerRadius(15)
+                    .foregroundColor(.white)
+            }
+            
+            
         }
         
     }
