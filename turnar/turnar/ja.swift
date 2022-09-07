@@ -124,12 +124,17 @@ struct ja: View {
                         .cornerRadius(15)
                         .foregroundColor(.white)
                         .onTapGesture {
-                            total = (prices[0] * quantity[0]) + (prices[1] * quantity[1] + (prices[2] * quantity[2]) + (prices[3] * quantity[3]) + (prices[4] * quantity[4]) + (prices[5] * quantity[5]))
+                            let item = (prices[0] * ja[0])
+                            let item2 = (prices[1] * ja[1])
+                            let item3 =  (prices[2] * ja[2])
+                            let item4 = (prices[4] * ja[4])
+                            let item5 = (prices[5] * ja[5])
+                            total = item + item2 + item3; +item4 + item5
                                 
                         }
                     Text("total price:\(total)")
                     
-                    NavigationLink(destination: cart()){
+                    NavigationLink(destination: cart(total: total)){
                     Image(systemName:"cart")
                         .resizable()
                         .scaledToFit()

@@ -17,7 +17,7 @@ struct Store: View {
                     .fontWeight(.semibold)
                     .foregroundColor(Color.green)
                     Divider()
-            NavigationView{
+            
             ScrollView{
                 
             
@@ -58,7 +58,7 @@ struct Store: View {
                 }
             }
             }
-            }
+            
         }
         
     }

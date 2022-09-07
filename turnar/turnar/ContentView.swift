@@ -13,6 +13,7 @@ struct ContentView: View {
     @State var number = ""
     @State var home = ""
     var body: some View {
+        NavigationView{
         ZStack{
             VStack{
             Image("ne")
@@ -40,7 +41,7 @@ struct ContentView: View {
                 TextField("home address", text: $home)
                     .font(.system(size: 20))
                     .background(Color.white)
-                NavigationView{
+               
                     NavigationLink(destination: Store()){
                         
                             Text("سجل الان")

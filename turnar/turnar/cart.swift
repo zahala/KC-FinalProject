@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct cart: View {
-    @State var total = 0
+    @State var total : Int
     var body: some View {
         VStack{
             Text("total price:\(total)")
@@ -19,6 +19,6 @@ struct cart: View {
 
 struct cart_Previews: PreviewProvider {
     static var previews: some View {
-        cart()
+        cart(total: 0)
     }
 }
