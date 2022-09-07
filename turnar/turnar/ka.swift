@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ka: View {
+    @State var ka = [0,0,0,0,0]
     var body: some View {
         VStack{
             HStack{
@@ -32,11 +33,88 @@ struct ka: View {
                 }
             }.padding()
             Spacer()
-            List{
+            
+            ScrollView{
                 HStack{
-                    Image("")
+                    Image("DB250")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 100, height: 100)
+                    Text("   80 kd")
+                        .font(.system(size: 20))
+                       Spacer()
+                    
+                 Stepper("", value: $ka[0], in: 0...10, step: 1)
+                     .labelsHidden()
                 }
-            }
+                HStack{
+                    Image("FD150e")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 100, height: 100)
+                    Text("   250 kd")
+                        .font(.system(size: 20))
+                    Spacer()
+                    
+                 Stepper("", value: $ka[1], in: 0...10, step: 1)
+                     .labelsHidden()
+                    
+                }
+                HStack{
+                    Image("pa")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 100, height: 100)
+                    Text("   450 kd")
+                        .font(.system(size: 20))
+                    Spacer()
+                    
+                 Stepper("", value: $ka[2], in: 0...10, step: 1)
+                     .labelsHidden()
+                }
+                HStack{
+                    Image("sh")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 100, height: 100)
+                    Text("   70 kd")
+                        .font(.system(size: 20))
+                    Spacer()
+                    
+                 Stepper("", value: $ka[3], in: 0...10, step: 1)
+                     .labelsHidden()
+                }
+                HStack{
+                    Image("h")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 100, height: 100)
+                    Text("   20 kd")
+                        .font(.system(size: 20))
+                    Spacer()
+                    
+                 Stepper("", value: $ka[4], in: 0...10, step: 1)
+                     .labelsHidden()
+                }
+                HStack{
+                    Image("fa")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 100, height: 100)
+                    Text("   5 kd")
+                        .font(.system(size: 20))
+                    Spacer()
+                    
+                 Stepper("", value: $ka[5], in: 0...10, step: 1)
+                     .labelsHidden()
+                }
+                HStack{
+                    Text("total:")
+                }
+            
+    
+    }
+            
         }
         
     }
