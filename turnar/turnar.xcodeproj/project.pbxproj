@@ -17,6 +17,7 @@
 		893291D028C4E7DE000477C1 /* ka.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893291CF28C4E7DE000477C1 /* ka.swift */; };
 		893291D228C4E802000477C1 /* ba.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893291D128C4E802000477C1 /* ba.swift */; };
 		893291D428C4E820000477C1 /* q.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893291D328C4E820000477C1 /* q.swift */; };
+		893291D628C8E015000477C1 /* cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893291D528C8E014000477C1 /* cart.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		893291CF28C4E7DE000477C1 /* ka.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ka.swift; sourceTree = "<group>"; };
 		893291D128C4E802000477C1 /* ba.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ba.swift; sourceTree = "<group>"; };
 		893291D328C4E820000477C1 /* q.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = q.swift; sourceTree = "<group>"; };
+		893291D528C8E014000477C1 /* cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cart.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				893291CF28C4E7DE000477C1 /* ka.swift */,
 				893291CD28C4E7BB000477C1 /* mo.swift */,
 				893291CB28C4E763000477C1 /* ja.swift */,
+				893291D528C8E014000477C1 /* cart.swift */,
 				893291BF28BA2A1E000477C1 /* Assets.xcassets */,
 				893291C128BA2A1E000477C1 /* Preview Content */,
 			);
@@ -158,6 +161,7 @@
 				893291CA28C22AA1000477C1 /* Store.swift in Sources */,
 				893291D028C4E7DE000477C1 /* ka.swift in Sources */,
 				893291D228C4E802000477C1 /* ba.swift in Sources */,
+				893291D628C8E015000477C1 /* cart.swift in Sources */,
 				893291D428C4E820000477C1 /* q.swift in Sources */,
 				893291BE28BA2A1A000477C1 /* ContentView.swift in Sources */,
 				893291CE28C4E7BB000477C1 /* mo.swift in Sources */,

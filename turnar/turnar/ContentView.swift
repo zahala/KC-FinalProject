@@ -44,15 +44,16 @@ struct ContentView: View {
                     NavigationLink(destination: Store()){
                         
                             Text("سجل الان")
-                                .font(.system(size: 45))
-                                .foregroundColor(Color.black)
-                                .background(Color.green)
-                                .frame(width:400,height: 150.0)
+                            .font(.system(size: 30))
+                            .padding(9)
+                            .background(.green)
+                            .cornerRadius(15)
+                            .foregroundColor(.white)
                     
                 }
                     
-            }.padding()
             }
+            }.padding()
             
             }
         

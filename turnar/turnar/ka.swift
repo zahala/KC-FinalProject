@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct ka: View {
-    @State var ka = [0,0,0,0,0]
+    @State var ka = [0,0,0,0,0,0]
+    @State var prices = [90,45,10,80,25,35]
+    @State var total = 0
     var body: some View {
         VStack{
             HStack{
@@ -22,7 +24,7 @@ struct ka: View {
                 Spacer()
                 Text("Tesbih_tools")
                     .font(.largeTitle)
-                    .foregroundColor(Color.blue)
+                    .foregroundColor(Color.green)
                 Spacer()
                 NavigationLink(destination: ContentView()){
                     Image(systemName:"person.fill")
@@ -36,80 +38,99 @@ struct ka: View {
             
             ScrollView{
                 HStack{
-                    Image("DB250")
+                    Image("19")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 100, height: 100)
-                    Text("   80 kd")
+                    Text("   \(prices[0]) kd")
                         .font(.system(size: 20))
                        Spacer()
                     
                  Stepper("", value: $ka[0], in: 0...10, step: 1)
                      .labelsHidden()
-                }
+                }.padding()
                 HStack{
-                    Image("FD150e")
+                    Image("20")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 100, height: 100)
-                    Text("   250 kd")
+                    Text("  \(prices[1]) kd")
                         .font(.system(size: 20))
                     Spacer()
                     
                  Stepper("", value: $ka[1], in: 0...10, step: 1)
                      .labelsHidden()
                     
-                }
+                }.padding()
                 HStack{
-                    Image("pa")
+                    Image("21")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 100, height: 100)
-                    Text("   450 kd")
+                    Text("   \(prices[2]) kd")
                         .font(.system(size: 20))
                     Spacer()
                     
                  Stepper("", value: $ka[2], in: 0...10, step: 1)
                      .labelsHidden()
-                }
+                }.padding()
                 HStack{
-                    Image("sh")
+                    Image("22")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 100, height: 100)
-                    Text("   70 kd")
+                    Text("   \(prices[3]) kd")
                         .font(.system(size: 20))
                     Spacer()
                     
                  Stepper("", value: $ka[3], in: 0...10, step: 1)
                      .labelsHidden()
-                }
+                }.padding()
                 HStack{
-                    Image("h")
+                    Image("23")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 100, height: 100)
-                    Text("   20 kd")
+                    Text("   \(prices[4]) kd")
                         .font(.system(size: 20))
                     Spacer()
                     
                  Stepper("", value: $ka[4], in: 0...10, step: 1)
                      .labelsHidden()
-                }
+                }.padding()
                 HStack{
-                    Image("fa")
+                    Image("24")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 100, height: 100)
-                    Text("   5 kd")
+                    Text("   \(prices[5]) kd")
                         .font(.system(size: 20))
                     Spacer()
                     
                  Stepper("", value: $ka[5], in: 0...10, step: 1)
                      .labelsHidden()
-                }
-                HStack{
-                    Text("total:")
+                }.padding()
+                VStack{
+                    Text("Press here for receipt")
+                        .padding(9)
+                        .background(.green)
+                        .cornerRadius(15)
+                        .foregroundColor(.white)
+                        .onTapGesture {
+                            total = (prices[0] * ka[0]) + (prices[1] * ka[1] + (prices[2] * ka[2]) + (prices[3] * ka[3]) + (prices[4] * ka[4]) + (prices[5] * ka[5]))
+                                
+                        }
+                    Text("total price:\(total)")
+                    NavigationLink(destination: cart()){
+                    Image(systemName:"cart")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 25, height: 25)
+                        .foregroundColor(Color.black)
+                    
+                    }
+                    
+                
                 }
             
     
